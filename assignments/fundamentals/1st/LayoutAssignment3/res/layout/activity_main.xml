@@ -2,10 +2,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
+
     <!-- TODO: 左側から順に、下記の View を配置していき、そのまとまりを画面上部に揃える -->
     <!-- 1. プロフィール画像(ic_launcher)と、それを囲う四角形の枠、その下に プロフィール と書かれた文字 -->
+
+    <RelativeLayout
+        android:id="@+id/ProfileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/ProfileBorderImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#393939" />
+        
+        <ImageView
+            android:id="@+id/ProfileImage"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignLeft="@+id/ProfileBorderImage"
+            android:layout_alignTop="@+id/ProfileBorderImage"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#ffffff"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/ProfileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ProfileBorderImage"
+            android:layout_below="@+id/ProfileImage"
+            android:text="プロフィール" />
+
     <!-- 2. 1. の右側の上半分に、ニックネームの表示と、そのさらに右端に設定アイコン -->
+        
+    </RelativeLayout>
     <!-- 3. 1. の右側の下半分に、電話ボタン、メール送信ボタン、共有ボタンの 3 つを均等割付 -->
     <!-- 4. 2. と 3. の間に分割線 -->
     <!-- 条件: 3. 以外では LinearLayout を使ってはならない -->
@@ -28,6 +65,8 @@
     <!-- Hint: 3. バッチ用の背景は android:background="@drawable/badge" にします -->
     <!-- Hint: 4. TextView には、文字の隣に drawable を表示する属性があります -->
 
+
     <!-- TODO: 上記の View の上に、お知らせを表示する View を配置する -->
     <!-- Hint: 1. お知らせを表示する View の背景は android:background="@drawable/notify_button_state_list" にします -->
+
 </RelativeLayout>
