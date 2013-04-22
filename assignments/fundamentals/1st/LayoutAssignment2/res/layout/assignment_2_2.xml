@@ -3,7 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffc356"
     tools:context=".MainActivity" >
 
+    <RelativeLayout
+        android:id="@+id/Layout1"
+    	android:background="#ff56c3"
+    	android:layout_margin="5dp"
+    	android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    		android:layout_margin="10dp"
+            android:text="ドロイド君の画像ファイル" />
+
+        <ImageView
+            android:id="@+id/Image1"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+    		android:background="#ffffff"
+    		android:layout_alignParentRight="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@id/Text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/Text1"
+            android:layout_centerVertical="true"
+            android:text="res/ic_launcher.png"
+            android:textColor="#cccccc"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    	android:background="#ff56c3"
+    	android:layout_marginLeft="5dp"
+    	android:layout_marginRight="5dp"
+    	android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/Layout1"
+        android:layout_height="wrap_content" 
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#cccccc"
+            android:textSize="10dp"
+            android:text="xhdpi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/Layout1"
+            android:textColor="#cccccc"
+            android:textSize="10dp"
+            android:text="12,516 bytes" />
+    </RelativeLayout>
 
 </LinearLayout>
