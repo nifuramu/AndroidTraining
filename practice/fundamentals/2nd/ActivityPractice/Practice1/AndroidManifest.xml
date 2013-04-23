@@ -16,11 +16,17 @@
         <activity
             android:name="jp.mixi.practice.activity.beg.MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="jp.mixi.practice.activity.beg.YokomarkActivity"
+            android:label="Yokomark Activity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
         </activity>
     </application>
 
