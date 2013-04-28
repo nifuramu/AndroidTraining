@@ -29,6 +29,7 @@ import android.widget.Toast;
  */
 public class MainActivity extends Activity {
     public static final String TAG = MainActivity.class.getSimpleName();
+    private final MyBroadcastReceiver receiver = new MyBroadcastReceiver();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,13 @@ public class MainActivity extends Activity {
         super.onStart();
 
         // ヘッドセットの接続状態を監視し、接続状態の変化があった時のブロードキャストメッセージを受信する
-        registerReceiver(new MyBroadcastReceiver(), new IntentFilter(Intent.ACTION_HEADSET_PLUG));
+        registerReceiver(receiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	unregisterReceiver(receiver);
+    	super.onDestroy();
     }
 
     // ブロードキャストのメッセージを受け取るクラス
