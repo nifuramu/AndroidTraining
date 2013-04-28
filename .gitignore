@@ -45,3 +45,7 @@ Thumbs.db
 
 # Keystore
 *.keystore
+
+# eclipse
+.project
+.settings
