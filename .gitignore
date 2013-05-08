@@ -45,3 +45,5 @@ Thumbs.db
 
 # Keystore
 *.keystore
+
+.settings

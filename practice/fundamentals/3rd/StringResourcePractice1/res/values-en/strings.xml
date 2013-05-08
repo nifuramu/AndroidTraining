@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StringResourcePractice1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="yokomark">yokomark</string>
+    <string name="analplay">analplay</string>
+    <string name="nuwaaa">nuwaa</string>
+    <string name="chinko">chinko</string>
+    <string name="unk">unk</string>
+
+</resources>

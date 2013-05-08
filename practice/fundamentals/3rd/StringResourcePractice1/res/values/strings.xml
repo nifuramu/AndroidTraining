@@ -5,6 +5,11 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <!-- TODO: 実習1: ここから下に、日本語の String リソースを作る -->
+    <string name="yokomark">よこまーく</string>
+    <string name="analplay">アナルプレイ</string>
+    <string name="nuwaaa">ぬわあああ</string>
+    <string name="chinko">ちんこ</string>
+    <string name="unk">うんこ</string>
     <!-- TODO: 実習2: 日本語の String リソースに対応する英語リソースを作る -->
 
 </resources>

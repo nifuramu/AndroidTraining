@@ -10,6 +10,7 @@
 
     <!-- TODO: この ImageView の背景として、作成した drawable を割当てる -->
     <ImageView
+        android:src="@drawable/unko"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"/>
