@@ -24,11 +24,9 @@ public class BookArrayAdapter extends ArrayAdapter<Book> {
     }
 
 	public View getView(int position, View convertView, ViewGroup parent) {
-	    View view = null;
+	    View view = convertView;
 		if (view == null) {
 			view = mInflater.inflate(R.layout.list_item_book, null);
-		} else {
-		   view = convertView; 
 		}
 		
 		Book book = (Book) mList.get(position);
