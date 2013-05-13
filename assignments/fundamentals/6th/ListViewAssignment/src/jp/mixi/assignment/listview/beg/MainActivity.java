@@ -96,12 +96,14 @@ public class MainActivity extends Activity {
         // ListViewから長押しされたリストアイテムを取得します
         Book book = (Book) mListView.getItemAtPosition(position);
         // ListViewからセットされているAdapterを取得します
-        // BookArrayAdapter adapter = (BookArrayAdapter) mListView.getAdapter();
+        BookArrayAdapter adapter = (BookArrayAdapter) mListView.getAdapter();
 
         if (item.getItemId() == R.id.DeleteListItem) {
             // TODO:Adapterを使用して長押ししたデータを削除してください
+            adapter.remove(book);
         } else if (item.getItemId() == R.id.AddListItem) {
             // TODO:Adapterを使用して長押ししたデータを追加してください
+            adapter.add(book);
         }
         // TODO:Adapterを使用して表示されているデータを更新してください
         
