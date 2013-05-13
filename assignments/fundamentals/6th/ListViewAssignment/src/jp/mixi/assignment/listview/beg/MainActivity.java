@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
 
+import jp.mixi.assignment.listview.beg.adapter.BookArrayAdapter;
+
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
@@ -34,13 +36,13 @@ public class MainActivity extends Activity {
 
         // TODO:BookArrayAdapterを作成して下さい。
         // (リストアイテムのレイアウトは用意されているlist_item_book.xmlをしてください。)
-        // BookArrayAdapter bookArrayAdapter = new BookArrayAdapter(mActivity,
-        // list);
+        BookArrayAdapter bookArrayAdapter = new BookArrayAdapter(mActivity, R.layout.list_item_book, list);
         mListView = (ListView) findViewById(R.id.BookList);
 
         // TODO:ListViewにBookArrayAdapterをセットしてください。
         // TODO:ListViewをタップしたとき、BookActivityに遷移するようにしてください。遷移するときにBookクラスのtitleを渡してください。
         // (BookActivityは用意されているものを使用してください)
+        mListView.setAdapter(bookArrayAdapter);
     }
 
     @Override
