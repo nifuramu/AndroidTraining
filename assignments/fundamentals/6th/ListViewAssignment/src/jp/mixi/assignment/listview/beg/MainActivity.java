@@ -2,12 +2,14 @@
 package jp.mixi.assignment.listview.beg;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
 
@@ -43,6 +45,18 @@ public class MainActivity extends Activity {
         // TODO:ListViewをタップしたとき、BookActivityに遷移するようにしてください。遷移するときにBookクラスのtitleを渡してください。
         // (BookActivityは用意されているものを使用してください)
         mListView.setAdapter(bookArrayAdapter);
+        
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // TODO Auto-generated method stub
+				Intent intent = new Intent(MainActivity.this, BookActivity.class);
+				Book book = (Book) parent.getAdapter().getItem(position);
+				intent.putExtra("title", book.getTitle());
+				startActivity(intent);
+            }
+        });
+        
     }
 
     @Override
